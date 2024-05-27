@@ -18,10 +18,10 @@ return new class extends Migration
             $table->string('arrival_station');
             $table->dateTime('departure_time');
             $table->dateTime('arrival_time');
-            $table->mediumInteger('train_code');
+            $table->string('train_code');
             $table->smallInteger('number_of_carriages');
-            $table->boolean('in_time');
-            $table->boolean('deleted');
+            $table->boolean('in_time')->default(true);
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }
